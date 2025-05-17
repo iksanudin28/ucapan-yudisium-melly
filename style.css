@@ -1,0 +1,325 @@
+:root {
+    --primary: #6a1b9a;
+    --secondary: #9c27b0;
+    --accent: #e91e63;
+    --light: #f3e5f5;
+    --dark: #4a148c;
+    --text: #333;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/flowers.png') no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.avatar-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 5px solid var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.avatar-placeholder i {
+    font-size: 4rem;
+    color: var(--primary);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.sender {
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.content {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.message-box {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: var(--light);
+    border-radius: 10px;
+    position: relative;
+}
+
+.message-box::before, .message-box::after {
+    content: '"';
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+}
+
+.message-box::before {
+    top: 10px;
+    left: 20px;
+}
+
+.message-box::after {
+    bottom: 10px;
+    right: 20px;
+}
+
+.quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--dark);
+    position: relative;
+}
+
+.wishes {
+    text-align: left;
+}
+
+.wishes p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.detail-card {
+    background: linear-gradient(145deg, var(--white), #f9f9f9);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-10px);
+}
+
+.detail-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.detail-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.detail-card p {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.memory-section {
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.memory-section h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.memory-text {
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+    position: relative;
+}
+
+.memory-text::before {
+    content: '"';
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+}
+
+.memory-text::after {
+    content: '"';
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    bottom: -40px;
+    right: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text);
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.share-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .details {
+        grid-template-columns: 1fr;
+    }
+    
+    .message-box {
+        padding: 20px 15px;
+    }
+    
+    .quote {
+        font-size: 1.3rem;
+    }
+    
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .avatar-placeholder i {
+        font-size: 3rem;
+    }
+}
